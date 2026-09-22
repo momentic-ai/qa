@@ -1,6 +1,29 @@
 # qa
 
-Run Momentic's Mo agent from your terminal.
+The CLI for Mo, Momentic's autonomous QA agent.
+
+```bash
+$ npm i qa
+```
+
+Point Mo at a URL. It explores the app in a real browser, writes its own test
+cases, and files one report: a verdict per case, plus reproduction steps and a
+recording for every bug it reproduces.
+
+```bash
+qa start "test https://your-app.com"
+```
+
+![A Mo session report: bug found while exploring, with reproduction steps and
+a recording](https://raw.githubusercontent.com/momentic-ai/qa/main/mo-report.png)
+
+[momentic.ai/mo](https://momentic.ai/mo)
+
+Requires Node 22.12+ or 24+ and a Momentic account (`qa login`). Mo is in beta.
+[Sign up](https://momentic.ai/mo) to get onboarded.
+
+Using a coding agent? `qa skills` installs Momentic's agent skills and MCP
+servers for it.
 
 ## Install
 
