@@ -1,5 +1,19 @@
 # qa
 
+## 0.17.0
+
+### Minor Changes
+
+- 2698901: Add a `mo wait` command to wait for a session to finish or ask for input.
+- 387a76c: Install the Mo CLI with `npm install -g qa`, including binaries for macOS, Linux, and Windows.
+- 6110d03: Remove the deprecated --momentic-mode option; Mo always uses Momentic browser tools. Remove this option from existing commands.
+
+### Patch Changes
+
+- ca82255: Failed commands now print a machine-readable error line to stderr with a stable error code for scripts and CI, and every failure exits with a consistent code.
+- e17599c: Add the `mo cost <session-id>` command for inspecting session costs.
+- 2fab330: An API key that was copied incompletely (for example with a trailing "…") is now reported as an invalid key instead of a network error.
+
 ## 0.16.0
 
 ### Minor Changes
