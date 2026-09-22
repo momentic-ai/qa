@@ -1,5 +1,16 @@
 # qa
 
+## 0.18.0
+
+### Minor Changes
+
+- 566b892: Add `mo start --interaction-speed` with `default` and `human` browser pacing options.
+
+### Patch Changes
+
+- f6e56d5: Update npm page copy and package metadata: descriptions, keywords, homepage, bugs, and README headers.
+- 8cc3a5e: Start a Mo session with `qa <url>` (or `mo <url>`), e.g. `npx qa https://your-app.com`.
+
 ## 0.17.0
 
 ### Minor Changes
