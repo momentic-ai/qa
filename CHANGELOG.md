@@ -1,5 +1,11 @@
 # qa
 
+## 0.19.0
+
+### Minor Changes
+
+- ede7955: Add `qa doctor` for install diagnostics, make the npm wrapper self-heal missing platform binaries (MO_BINARY_PATH override, on-demand install, package-manager-aware repair hints, Windows ARM64 to x64 fallback), and rename the command and installed binary to `qa` on every channel: the npm package drops its `mo` shim (npm removes it on update) and the standalone installer writes `qa` instead of `mo`. Releases keep publishing `mo-<target>` GCS aliases so installed `mo` binaries can still self-upgrade; an old `mo` file keeps its name after upgrading.
+
 ## 0.18.0
 
 ### Minor Changes
