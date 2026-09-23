@@ -40,9 +40,10 @@ Or run it without a global install:
 npx qa --help
 ```
 
-The npm package is `qa`. It installs a compiled `mo` binary for your system and
-exposes both `qa` and `mo` commands. Both commands show `qa` in help when
-installed through npm. The standalone installer uses `mo` in help.
+The npm package is `qa`. It installs a compiled `qa` binary for your system and
+exposes the `qa` command. The standalone installer
+(`curl -fsSL https://cli.momentic.ai/qa | sh`) also installs `qa`. Releases
+before 0.18 named the command `mo`.
 
 The npm launcher requires Node.js 22.12 or later in the 22.x series, or Node.js
 24 or later. Binaries are available for macOS ARM64/x64, Linux ARM64/x64 (glibc
@@ -73,5 +74,24 @@ npm install -g qa@latest
 For a project dependency, update `qa` with your project's package manager.
 `qa upgrade` prints these instructions without replacing npm-managed files.
 
+## Troubleshoot
+
+Run `qa doctor` to print the install method, resolved binary path, every
+`mo`/`qa`/`momentic` executable on your `PATH`, and the one that wins. Include
+the output when reporting a CLI problem.
+
+- `npm install -g qa` fails with `EEXIST` if a file named `qa` already exists in
+  npm's global bin directory. Check `ls -la $(npm prefix -g)/bin` and remove the
+  stale entry; do not pass `--force`.
+- `qa` 0.17.x also installed a `mo` command. Updating removes it.
+- A curl install from before the rename left `mo` at `$HOME/.local/bin/mo`.
+  `mo upgrade` still downloads new releases, but the file keeps the `mo` name.
+  Remove it and rerun the installer to switch to `qa`.
+- If a standalone `mo` and the npm package coexist, the first on `PATH` runs. In
+  a shell that already ran the old command, run `hash -r` to clear the cached
+  path.
+- `npx mo` is not Momentic; the `mo` package on npm is a different project. Use
+  `npx qa`.
+
 See the [Mo CLI reference](https://docs.momentic.ai/cli-reference/mo/overview)
-for commands and examples. The reference's `mo` commands also work with `qa`.
+for commands and examples.
