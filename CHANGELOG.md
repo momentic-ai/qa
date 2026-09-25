@@ -1,5 +1,11 @@
 # qa
 
+## 0.19.1
+
+### Patch Changes
+
+- 9fcca29: Upgrade finishes the mo-to-qa rename automatically and qa doctor runs the same checks as momentic doctor.
+
 ## 0.19.0
 
 ### Minor Changes
