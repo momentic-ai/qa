@@ -1,5 +1,11 @@
 # qa
 
+## 0.19.2
+
+### Patch Changes
+
+- 9f0cd97: Unify session state across `qa read`, `qa status`, and `qa report`: `displayState` now reports the same UI-visible session state on all three commands, `sessionState` and `state` carry the lifecycle state everywhere, and `status.state` switches from the display word to the lifecycle word.
+
 ## 0.19.1
 
 ### Patch Changes
