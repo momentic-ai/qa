@@ -1,5 +1,15 @@
 # qa
 
+## 0.19.3
+
+### Patch Changes
+
+- bd15974: Security fixes.
+- 66c5f71: Show a clear, actionable error instead of a crash when the skills command can't write to a read-only instructions file or skills directory.
+- 428b6d1: `qa start` now shows the API's validation message (for example, an unknown environment name) as a user-facing error instead of reporting it as an unexpected CLI failure.
+- 7cd63a7: Remove the --granularity option from qa start. Describe the desired test depth in the session brief.
+- e719941: Fix the Mo CLI crashing on startup on Windows, including GitHub Actions runners.
+
 ## 0.19.2
 
 ### Patch Changes
