@@ -1,5 +1,13 @@
 # qa
 
+## 0.20.1
+
+### Patch Changes
+
+- e114377: Keep failed checks visible in reports and distinguish sub-agent execution status from its last submitted result.
+
+  Default new Momentic web sessions to Turbo while preserving organization and mobile restrictions.
+
 ## 0.20.0
 
 ### Minor Changes
