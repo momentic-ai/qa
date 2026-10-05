@@ -1,5 +1,13 @@
 # qa
 
+## 0.20.0
+
+### Minor Changes
+
+- 203dad2: Start Mo sessions for GitHub pull requests from the CLI with focused testing, preview discovery, and code diagnoses in bug reports. Supply curated local patches from the PR checkout when pushing is disallowed; the CLI reads their base revision from local HEAD.
+
+  The QA skill leaves flow selection, test cases, and delegation to Mo within the user's scope and budget, while coding agents handle access and host coordination.
+
 ## 0.19.3
 
 ### Patch Changes
