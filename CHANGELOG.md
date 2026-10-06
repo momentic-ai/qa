@@ -1,5 +1,11 @@
 # qa
 
+## 0.20.2
+
+### Patch Changes
+
+- dd45470: Add a one-time Node.js compatibility build for Windows Server 2016.
+
 ## 0.20.1
 
 ### Patch Changes
