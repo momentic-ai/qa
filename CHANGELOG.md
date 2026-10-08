@@ -1,5 +1,11 @@
 # qa
 
+## 0.21.0
+
+### Minor Changes
+
+- 7658486: Updates to session startup and validation.
+
 ## 0.20.2
 
 ### Patch Changes
