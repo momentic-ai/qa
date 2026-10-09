@@ -1,5 +1,11 @@
 # qa
 
+## 0.22.1
+
+### Patch Changes
+
+- 8606f47: Show login and site protection requests in Mo CLI output and report when user input is needed to continue.
+
 ## 0.22.0
 
 ### Minor Changes
