@@ -1,5 +1,11 @@
 # qa
 
+## 0.21.1
+
+### Patch Changes
+
+- 34dad77: Include pending attention status in compact session status output.
+
 ## 0.21.0
 
 ### Minor Changes
