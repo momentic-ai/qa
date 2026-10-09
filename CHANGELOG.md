@@ -1,5 +1,11 @@
 # qa
 
+## 0.22.0
+
+### Minor Changes
+
+- 6ba389c: Enable WebGL when starting browser sessions with --webgl.
+
 ## 0.21.1
 
 ### Patch Changes
