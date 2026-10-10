@@ -1,5 +1,11 @@
 # qa
 
+## 0.22.2
+
+### Patch Changes
+
+- fb8b9b4: Better support for public GitHub repositories.
+
 ## 0.22.1
 
 ### Patch Changes
