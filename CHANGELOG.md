@@ -1,5 +1,15 @@
 # qa
 
+## 0.23.0
+
+### Minor Changes
+
+- a6b1c24: Add configurable session-level budgets
+
+### Patch Changes
+
+- 5fcd66a: Fix `qa tunnel start` failing immediately on Windows, and let `qa upgrade` update the Windows release binary in place.
+
 ## 0.22.2
 
 ### Patch Changes
