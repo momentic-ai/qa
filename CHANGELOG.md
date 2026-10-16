@@ -1,5 +1,17 @@
 # qa
 
+## 0.24.0
+
+### Minor Changes
+
+- e39bbb2: Choose regular or large browsers with --size when starting Mo sessions.
+- 9a26778: Added command to set bug statuses
+
+### Patch Changes
+
+- ab40d1d: Honor HTTP_PROXY, HTTPS_PROXY, and NO_PROXY for API requests.
+- 7505bee: Let Mo finish reproducing bugs without a time limit.
+
 ## 0.23.0
 
 ### Minor Changes
