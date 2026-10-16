@@ -1,5 +1,11 @@
 # qa
 
+## 0.25.0
+
+### Minor Changes
+
+- beb0def: Export complete bug reports with available videos, screenshots, browser logs, and structured evidence for coding agents.
+
 ## 0.24.0
 
 ### Minor Changes
