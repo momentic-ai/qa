@@ -1,5 +1,15 @@
 # qa
 
+## 0.26.0
+
+### Minor Changes
+
+- 01fb23f: Add `qa start --effort low|medium|high|max` to choose testing effort. Effort sets the session's default concurrency and testing time; medium is the default.
+
+### Patch Changes
+
+- 2cd024b: Explain tunnel target mismatches with actionable diagnostics when starting a session or navigating.
+
 ## 0.25.0
 
 ### Minor Changes
