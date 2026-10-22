@@ -1,5 +1,12 @@
 # qa
 
+## 0.27.1
+
+### Patch Changes
+
+- 4ba58ae: Show the real Connector error when qa tunnel start fails on Windows, instead of a temporary directory cleanup error.
+- 3847c4f: Make tunnel startup easier to read, with clear next steps and JSON output for scripts.
+
 ## 0.27.0
 
 ### Minor Changes
