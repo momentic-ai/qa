@@ -6,9 +6,8 @@ The CLI for Mo, Momentic's autonomous QA agent.
 $ npm i qa
 ```
 
-Point Mo at a URL. It explores the app in a real browser, writes its own test
-cases, and files one report: a verdict per case, plus reproduction steps and a
-recording for every bug it reproduces.
+Point Mo at a URL. It explores the app in a real browser and reports its
+findings, with reproduction steps and a recording for every bug it reproduces.
 
 ```bash
 qa start "test https://your-app.com"
