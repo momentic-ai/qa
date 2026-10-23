@@ -1,5 +1,16 @@
 # qa
 
+## 0.28.0
+
+### Minor Changes
+
+- 9b188e3: Let Mo ask questions while continuing work, and answer specific questions from the CLI.
+
+### Patch Changes
+
+- 360bd47: Recover more reliably from temporary recording upload failures.
+- acdcad5: Include the connector enrollment log when qa tunnel start fails.
+
 ## 0.27.1
 
 ### Patch Changes
