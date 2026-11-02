@@ -1,5 +1,71 @@
 # qa
 
+## 0.30.1
+
+### Patch Changes
+
+- 35b21db: Omit `completed` from `qa send` JSON while preserving its other response fields, and update its help, documentation, and skill guidance. Hide internal Mo wakeups from public read output and latest-message previews while preserving persisted history and stream bookkeeping.
+- 756ff1f: Simplify the Mo skill and documentation for sending follow-up messages.
+
+## 0.30.0
+
+### Minor Changes
+
+- d1b3166: Add accept, review, dismiss, fix, and reopen commands for finding triage. Bug
+  output includes lifecycle status and dismissal reason. Legacy set-status values
+  keep their meaning; ambiguous short bug IDs require the exact finding name.
+- 4be9109: Add `qa start --no-test-cases` to skip Mo's observed test cases, which are recorded in the background from agent activity.
+- ef1d07f: Improve browser session reliability and cleanup.
+
+### Patch Changes
+
+- 7c4720c: Fix `qa tunnel start`, `list`, and `stop` in the standalone binary, which reported running tunnels as unreachable and failed detached starts.
+
+## 0.29.0
+
+### Minor Changes
+
+- 207d019: Remove test-case data from CLI reports and status output.
+
+  Expose the root agent's explicit completion flag in status, read, wait, and
+  report JSON, independently of session lifecycle and agent verdicts.
+
+- 0d3da20: Give each bug a shell-safe `id` next to its name in `qa status --full`, `qa bugs`
+  output, and reports. Add `qa bugs describe <session-id> <bug>` for one bug's
+  full details; it and `qa bugs set-status` accept the id or the exact name.
+
+  `qa status --full` now lists bugs (id, name, kind, summary) with counts, the
+  latest message, and the blocker reason, and omits verdicts. Add `--output <file>`
+  to `qa status`, `qa bugs list`, and `qa bugs describe`.
+
+- 0d3da20: `qa report` always exports and always includes Mo finding links. When Mo is not
+  done, it warns on stderr that the report may be partial and lists the warning in
+  `report.json` `warnings`. `--require-idle` is no longer needed; it is accepted
+  and ignored so existing scripts keep running.
+- 0d3da20: CLI JSON now reports the session's state as one `status` field, the word the web
+  UI shows (`running`, `needs_you`, `findings`, `ready`, …). It replaces
+  `displayState`, `sessionState`, and the legacy `state` in `qa status`,
+  `qa read --json`, `qa wait --json`, `qa send`, and the `report.json` summary.
+  The API is unchanged, so older `qa` versions keep working; scripts that parse
+  this CLI's JSON should read `.status`.
+- 6e974f3: Show session progress in `qa status`: test case outcomes, suspected bugs, active sub-agents and testing-clock minutes. `--full` also lists each sub-agent.
+
+### Patch Changes
+
+- 754e33f: A plain `qa send` now answers Mo's open question card, and `qa read`, `qa wait` and `qa send --wait` print how to answer a pending question.
+- 3de8c28: Include culprit changes and source links in exported bug reports.
+- 3441217: Retry uploads after temporary network and server failures.
+- 4fb860c: Update validation security protections while preserving existing bulk request sizes.
+- 15d99c9: `qa read`, `qa wait` and `qa send --wait` list every open Mo question card with its id. `--question-id` no longer fails for a card that is not open; the text is sent as a normal message.
+- 21b628d: `qa status` no longer prints `attentionPending` (`status: "checking"` means the same), and help and the bundled `mo-qa` skill describe `checking` as an unknown outcome.
+- 0d3da20: Show the JSON each command prints in its `--help`.
+- 0d3da20: Fix `qa` output being cut off at 64 KB when stdout is a pipe, such as `qa status --full | jq`.
+- 6e974f3: `qa report` prints each warning once and names the artifact type in download errors, the issue draft says "Not captured." when no page URL was recorded, and `qa stop --subagents` no longer implies exporting after stopping. `qa send` takes the session ID as its first argument, like the other session commands; `--session-id` still works.
+- 0d3da20: Accept `--json` on commands that always print JSON, list each effort's testing time in `qa start --help`, note that sub-agents take time to shut down after `qa stop --subagents`, and say a stopped session's report covers work up to the stop.
+- 0d3da20: `qa version` no longer suggests upgrading when the installed CLI is newer than
+  the server's latest release.
+- 52d6e82: Recover interrupted mobile sessions and give restarted device drivers time to become ready.
+
 ## 0.28.0
 
 ### Minor Changes
