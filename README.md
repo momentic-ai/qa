@@ -18,8 +18,8 @@ a recording](https://raw.githubusercontent.com/momentic-ai/qa/main/mo-report.png
 
 [momentic.ai/mo](https://momentic.ai/mo)
 
-Requires Node 22.12+ or 24+ and a Momentic account (`qa login`). Mo is in beta.
-[Sign up](https://momentic.ai/mo) to get onboarded.
+Requires Node 22.12+ or 24+ and a Momentic account (`qa login`).
+[Sign up](https://momentic.ai/mo) to create one.
 
 Using a coding agent? `qa skills` installs Momentic's agent skills and MCP
 servers for it.
