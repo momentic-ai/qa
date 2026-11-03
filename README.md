@@ -21,8 +21,9 @@ a recording](https://raw.githubusercontent.com/momentic-ai/qa/main/mo-report.png
 Requires Node 22.12+ or 24+ and a Momentic account (`qa login`).
 [Sign up](https://momentic.ai/mo) to create one.
 
-Using a coding agent? `qa skills` installs Momentic's agent skills and MCP
-servers for it.
+Using a coding agent? `qa skills` installs the `mo-qa` skill and adds a short
+pointer block to the agent's instructions file. Rerunning it updates only that
+block.
 
 ## Install
 
