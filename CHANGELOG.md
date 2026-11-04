@@ -1,5 +1,13 @@
 # qa
 
+## 0.31.1
+
+### Patch Changes
+
+- ecc4f0f: When HTTPS traffic is intercepted during sign-in, the error now explains how to trust your corporate certificate with --use-system-ca or NODE_EXTRA_CA_CERTS.
+- 7252ef0: Improve inference speed by scaling screenshots appropriately
+- 6ba8002: Explain missing inputs and filesystem access failures without internal crash reports. Return a 400 response for malformed JSON requests to the local editor and MCP servers, and keep local project settings when organization settings cannot be reached.
+
 ## 0.31.0
 
 ### Minor Changes
