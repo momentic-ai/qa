@@ -1,5 +1,19 @@
 # qa
 
+## 0.31.0
+
+### Minor Changes
+
+- fe3eb56: Add pull request and commit references to bug fix and reopen commands.
+- 37de26a: Each CLI's pointer block lists only its own skills, and each command rewrites only its own block. The new `devin` target installs skills to `.devin/skills` and writes its pointer in `AGENTS.md`. `qa skills` installs only `mo-qa`. Reinstalling removes skills that this CLI generated earlier and no longer ships, unless another Momentic CLI's pointer in the repository lists the same skills directory.
+
+### Patch Changes
+
+- 193b9f6: Fix send waits timing out after Mo starts a new turn.
+- b351774: Mo's Human interaction speed now types at about 120 words per minute.
+- 89d309b: Mo's setup actions are less likely to change the wrong item on a crowded page.
+- 651e036: A retest you request in Mo now finishes even after the session's time budget is spent.
+
 ## 0.30.1
 
 ### Patch Changes
