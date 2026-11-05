@@ -1,5 +1,17 @@
 # qa
 
+## 0.32.0
+
+### Minor Changes
+
+- 74fd57e: Save named tunnel identities across process restarts. Resume a saved tunnel with `qa tunnel start --name <name>` without an API key. Replace its destinations with `qa tunnel update <name-or-id> <addresses...>` without restarting the host.
+- 74fd57e: Tunnel wildcard destinations such as `*.staging.internal:443`, including nested subdomains on the specified port.
+
+### Patch Changes
+
+- 8ba09bd: Retry temporary Windows file locks when starting a tunnel.
+- 74fd57e: Collect automatic tunnel connectivity diagnostics and process uptime. Tag reports with the tunnel and organization when available. Keep a bounded local history for later upload. Diagnostic failures do not stop the tunnel.
+
 ## 0.31.1
 
 ### Patch Changes
