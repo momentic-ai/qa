@@ -1,5 +1,23 @@
 # qa
 
+## 0.33.0
+
+### Minor Changes
+
+- 1639a55: Add `qa start --slack-channel <channel>` to deliver Mo reports to a Slack channel by ID or name, including PR sessions.
+- 5b565cb: Add `qa cases list` and `qa cases describe` to read the test cases Mo observed, with their accounts, prerequisites, steps, statuses, and filed bugs. `qa status` adds `casesReady`, which turns true once the session has stopped and Mo has finished recording test cases.
+
+### Patch Changes
+
+- e34629e: Handle viewer port conflicts, missing app downloads and prompt cancellation, recognize argument errors from duplicate CLI parser installations, stop commands after an upgrade, and keep browser-launch failures recoverable.
+- 027a0a7: Recover browser tools from closed or unresponsive sessions and explain missing authentication files.
+- 8aca88b: Explain certificate and connection failures during authentication and mobile asset upload, provide clearer guidance for invalid server authentication responses, and avoid retrying failed certificate checks. Improve download reliability after temporary connection failures.
+- 72fa69f: Validate report inputs before submission and return actionable feedback for rejected agent tool calls.
+- ba06731: Support custom servers without an app UI in sign-in information, local run summaries, and result uploads.
+- 6598aaa: Share CLI command registration, startup handlers, error catalogs and npm upgrade orchestration without changing command behavior.
+- da1212b: Explain when iOS drag targets resolve to the same location.
+- 892b074: Show retry guidance when session billing is temporarily unavailable.
+
 ## 0.32.0
 
 ### Minor Changes
