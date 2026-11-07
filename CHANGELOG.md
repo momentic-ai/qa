@@ -1,5 +1,17 @@
 # qa
 
+## 0.34.0
+
+### Minor Changes
+
+- bfcd681: Support holding and releasing keyboard keys in agent-authored steps for modified clicks.
+- b3d9e1f: Support waiting for downloads from coordinate-based clicks.
+
+### Patch Changes
+
+- cec6c70: Report a clear error for iOS Photos destination filenames containing spaces.
+- ad108a6: Have the Mo skill use the hosted Momentic tools by default and the `qa` CLI for localhost and private targets that need a tunnel.
+
 ## 0.33.0
 
 ### Minor Changes
