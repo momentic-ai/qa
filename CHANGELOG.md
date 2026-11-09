@@ -1,5 +1,17 @@
 # qa
 
+## 0.35.0
+
+### Minor Changes
+
+- cb1e541: Keep named tunnels registered when `qa tunnel stop` stops their local host, so they can resume with the same saved identity. Use `qa tunnel stop --delete` to revoke and forget a tunnel. Add `--config-dir` to every tunnel command for a shared tunnel state folder.
+
+### Patch Changes
+
+- c43f25c: Report the calling coding agent, such as Claude Code, Codex or Cursor, to Momentic when detected.
+- 98f2fec: Share server and API-key option factories and CLI debug setup without changing command behavior.
+- c49059c: Reuse an existing Connector tunnel when it reaches the target, and only stop tunnels you started.
+
 ## 0.34.0
 
 ### Minor Changes
