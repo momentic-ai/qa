@@ -21,9 +21,12 @@ a recording](https://raw.githubusercontent.com/momentic-ai/qa/main/mo-report.png
 Requires Node 22.12+ or 24+ and a Momentic account (`qa login`).
 [Sign up](https://momentic.ai/mo) to create one.
 
-Using a coding agent? `qa skills` installs the `mo-qa` skill and adds a short
-pointer block to the agent's instructions file. Rerunning it updates only that
-block.
+Using a coding agent? `qa skills --target claude-code` installs only `mo-qa` and
+adds a pointer block to the agent's instructions. Replace `claude-code` with
+your agent's target. Rerunning it refreshes the skill files and updates that
+block. Follow the skill to connect `momentic-hosted` with OAuth for public
+targets, or use the CLI with a tunnel for private targets. Keep the interface
+the user requests.
 
 ## Install
 
