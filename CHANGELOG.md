@@ -1,5 +1,33 @@
 # qa
 
+## 0.35.1
+
+### Patch Changes
+
+- c5e6db2: Resolve mixed-product workspaces to the matching project, identify empty mobile projects, and preserve HTTPS in tunnel instructions.
+
+  Keep MCP diagnostics connected when a pinned config is missing, and version skill bundles using their product's references.
+
+- 56a2069: Preserve complete native tunnel errors, record signals and process exits, and retain last-seen evidence for unexplained shutdowns. Improve proxy-aware connection diagnostics and retry failed tunnel telemetry exports within a bounded buffer.
+- c5e6db2: Use shared web/mobile pointers to rediscover installed skill targets. Keep ownership separate from whether the installed content is current.
+- c5e6db2: Rediscover installed targets through shared web/mobile ownership while keeping Mo installations separate.
+- 550ee31: Fix Android text entry for Hindi, accented characters, and emoji.
+- d7b0ea9: Make `qa wait` follow sub-agents without losing or replaying replies. Use stable message IDs to exclude earlier replies and omit user messages. Allow five minutes for sleeping or checking sessions to resume, and exit `1` if Mo failed, including at startup.
+- 5d36a54: Explain missing mobile app builds before installation starts.
+- c5e6db2: Clarify editor setup, MCP connections,
+  and the next step after installing skills.
+- abd522d: Select saved environments, mobile builds, and Connectors when starting hosted Mo sessions from a coding agent.
+- a67cc0c: Fail a click, type, or key press with a clear error when the browser stops responding instead of hanging.
+- c5e6db2: Preserve HTTP and HTTPS tunnel destinations across named starts, updates, and saved-state restarts.
+- f077e7c: `qa tunnel start --name`, `qa tunnel update`, and `qa tunnel stop --delete` now explain how to recover when a saved tunnel's Connector is not found for the current API key's organization, instead of reporting an unexpected error.
+- c5e6db2: Ship the same browser, Android, and iOS skills from both CLIs. Update shared installations and pointers, remove retired skills, and reject older bundles without overwriting newer installed skills.
+
+  Repair mixed installations left by old CLIs, retire their generated mobile Cursor pointer, and warn about unmanaged retired skills. Require changesets for both CLIs when shared skills change and for qa when mo-qa changes.
+
+  Simplify bundled skills and clarify Mo replies, follow deadlines, credentials, messaging, and cleanup.
+
+- c5e6db2: Accept HTTP and HTTPS URL-form tunnel addresses, preserving their scheme and using their hostname and port. Ignore paths, query strings, and fragments before validating destinations.
+
 ## 0.35.0
 
 ### Minor Changes
