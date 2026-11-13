@@ -1,5 +1,15 @@
 # qa
 
+## 0.36.0
+
+### Minor Changes
+
+- e3ccce1: Add mobile build management to qa using shared upload, listing, download, and deletion logic with momentic-mobile, and verify uploads before reporting success.
+
+### Patch Changes
+
+- b5ac4a4: Overlap tunnel diagnostics with session startup to reduce start acknowledgment latency.
+
 ## 0.35.1
 
 ### Patch Changes
