@@ -1,5 +1,31 @@
 # qa
 
+## 0.37.0
+
+### Minor Changes
+
+- d8f9a4b: Add qa mcp to connect coding agents to hosted Momentic tools using the saved CLI login.
+- 9c51d68: Check uploaded mobile builds with qa doctor and momentic-mobile doctor before starting a session.
+- ec6ac2d: List saved environments by name without exposing secret variables.
+- ea50d3e: List your QA sessions and recover uncertain ordinary-session startups without repeating a paid start.
+- b721bb2: Set private session secrets after startup using environment variables or files, without printing their values.
+
+### Patch Changes
+
+- 1b4995b: Stop listing iOS device .ipa files in asset upload help and errors.
+- 94bc07e: Improve support for application keyboard shortcuts.
+- b4ab4fe: Document hosted Mo form choices, explicit no-environment selection, and cancellation behavior.
+- b4ab4fe: Guide coding agents to record supported Mo triage outcomes without requiring triage after unrelated QA runs.
+- 8cb831e: The `mo-qa` skill now asks you to start the tunnel when your agent can't run commands on the machine that reaches your app.
+- 223291d: Agents now ask before stopping hosted Mo sessions and ask you to start a tunnel when no Connector is online.
+- d64b843: Tag the report fetches that the fix and review commands make with their own command.
+- 63e950d: Correct module input and preview guidance. Clarify failure diagnosis,
+  end-to-end checkpoints, and QA scope and spending safeguards.
+- 55fd3bc: Add a mobile bug-bash playbook to the bundled mo-qa skill with build checks, saved environment discovery, startup recovery and session secret updates.
+- d8f9a4b: Launch installer-configured hosted MCP through qa mcp with the shared CLI login. Plugin connections keep OAuth by default and offer the CLI bridge as an opt-in.
+- d8f9a4b: Support CLI-launched hosted Momentic connections without changing browser-client sign-in.
+- 2439a3d: Add managed JDK and Android platform-tools runtime packs to qa
+
 ## 0.36.0
 
 ### Minor Changes
