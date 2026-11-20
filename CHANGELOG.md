@@ -1,5 +1,12 @@
 # qa
 
+## 0.37.2
+
+### Patch Changes
+
+- 8aa677d: Separate the Mo CLI skill from the hosted MCP plugin skill.
+- b5f2b7c: Show clear errors when Mo rejects a message.
+
 ## 0.37.1
 
 ### Patch Changes
