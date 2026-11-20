@@ -1,5 +1,12 @@
 # qa
 
+## 0.37.1
+
+### Patch Changes
+
+- a973968: Hide internal options from `qa` help.
+- 591dded: Record Mo finding outcomes for requested fixes and tracker filings.
+
 ## 0.37.0
 
 ### Minor Changes
