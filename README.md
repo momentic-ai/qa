@@ -3,7 +3,7 @@
 The CLI for Mo, Momentic's autonomous QA agent.
 
 ```bash
-$ npm i qa
+$ npm i qa@latest
 ```
 
 Point Mo at a URL. It explores the app in a real browser and reports its
@@ -24,23 +24,26 @@ Requires Node 22.12+ or 24+ and a Momentic account (`qa login`).
 Using a coding agent? `qa skills --target claude-code` installs only `mo-qa` and
 adds a pointer block to the agent's instructions. Replace `claude-code` with
 your agent's target. Rerunning it refreshes the skill files and updates that
-block. Follow the skill to connect `momentic-hosted` with OAuth for public
-targets, or use the CLI with a tunnel for private targets. Keep the interface
-the user requests.
+block. The skill preserves the requested interface and defaults to the CLI. For
+CLI sessions, private targets need a tunnel. Hosted sessions for private targets
+need an existing authenticated connection and an online Connector that can reach
+them. See the
+[Mo routing guidance](https://github.com/momentic-ai/skills/blob/main/skills/mo-qa/SKILL.md#run-qa-with-mo).
+The CLI path does not require hosted OAuth.
 
 ## Install
 
 Install the CLI globally:
 
 ```bash
-npm install -g qa
+npm install -g qa@latest
 qa --help
 ```
 
 Or run it without a global install:
 
 ```bash
-npx qa --help
+npx qa@latest --help
 ```
 
 The npm package is `qa`. It installs a compiled `qa` binary for your system and
@@ -83,9 +86,9 @@ Run `qa doctor` to print the install method, resolved binary path, every
 `mo`/`qa`/`momentic` executable on your `PATH`, and the one that wins. Include
 the output when reporting a CLI problem.
 
-- `npm install -g qa` fails with `EEXIST` if a file named `qa` already exists in
-  npm's global bin directory. Check `ls -la $(npm prefix -g)/bin` and remove the
-  stale entry; do not pass `--force`.
+- `npm install -g qa@latest` fails with `EEXIST` if a file named `qa` already
+  exists in npm's global bin directory. Check `ls -la $(npm prefix -g)/bin` and
+  remove the stale entry; do not pass `--force`.
 - `qa` 0.17.x also installed a `mo` command. Updating removes it.
 - A curl install from before the rename left `mo` at `$HOME/.local/bin/mo`.
   `mo upgrade` still downloads new releases, but the file keeps the `mo` name.
@@ -94,7 +97,7 @@ the output when reporting a CLI problem.
   a shell that already ran the old command, run `hash -r` to clear the cached
   path.
 - `npx mo` is not Momentic; the `mo` package on npm is a different project. Use
-  `npx qa`.
+  `npx qa@latest`.
 
 See the [Mo CLI reference](https://docs.momentic.ai/cli-reference/mo/overview)
 for commands and examples.
