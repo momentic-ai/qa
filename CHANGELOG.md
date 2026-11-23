@@ -1,5 +1,12 @@
 # qa
 
+## 0.37.4
+
+### Patch Changes
+
+- d9d7676: Clarify Mo CLI authentication recovery.
+- 03a572f: Use existing authenticated hosted tools with the CLI-first Mo skill.
+
 ## 0.37.3
 
 ### Patch Changes
