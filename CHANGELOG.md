@@ -1,5 +1,11 @@
 # qa
 
+## 0.37.3
+
+### Patch Changes
+
+- 20875f1: `qa start` refuses max effort for a Mac target; Mac sessions offer low through high for now.
+
 ## 0.37.2
 
 ### Patch Changes
