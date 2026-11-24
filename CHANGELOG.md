@@ -1,5 +1,11 @@
 # qa
 
+## 0.37.5
+
+### Patch Changes
+
+- ddc3770: `qa start --pr` now rejects a `--url` that is not an http:// or https:// URL before starting the session.
+
 ## 0.37.4
 
 ### Patch Changes
