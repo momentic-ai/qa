@@ -1,5 +1,11 @@
 # qa
 
+## 0.37.7
+
+### Patch Changes
+
+- e2b59f1: Fix error handling for some `qa bugs` arguments.
+
 ## 0.37.6
 
 ### Patch Changes
