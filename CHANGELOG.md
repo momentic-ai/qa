@@ -1,5 +1,19 @@
 # qa
 
+## 0.38.0
+
+### Minor Changes
+
+- 3fed193: `qa status` shows why Mo is blocked (`blockerReason`) and, when Mo gave one, what you must do (`blockerSummary`). `qa wait` explains a blocker, exits 1 when Mo stops on a blocker such as a usage limit, and reports a refused start over a usage limit as `MO_QUOTA_EXCEEDED`.
+- 3fed193: `qa report` exports an offline viewer for each browser replay: open `bugs/bug-NNN-replay.html` in any browser to play the recording without a Mo login or network access. It uses the Momentic web app's replay player, with its timeline, action markers, and speed controls, and holds only the bug's reproduction window when one was recorded. The report lists it as a `player` artifact.
+
+### Patch Changes
+
+- d9a26d7: Improve browser session reliability.
+- 9a5a451: Report HTTP timeouts during `qa wait` as retryable network errors.
+- a9543de: Allow PR runs on open, closed, or merged pull requests and show the option to skip GitHub updates.
+- 956aed2: Restore the CLI-only first-session guidance in the bundled Mo QA skill.
+
 ## 0.37.7
 
 ### Patch Changes
